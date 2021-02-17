@@ -47,6 +47,12 @@ EOF
   }
 }
 
+  fallback_to_ondemand       = true
+  draining_timeout           = 120
+  utilize_reserved_instances = false
+  grace_period               = 600
+  spot_percentage            = 100
+
 module "ocean-controller" {
   source  = "spotinst/ocean-controller/spotinst"
   version = ">= 0.10.0"
