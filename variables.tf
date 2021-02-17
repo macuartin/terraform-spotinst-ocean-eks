@@ -447,3 +447,21 @@ variable "create_ocean" {
   description = "Controls whether Ocean should be created (it affects all Ocean resources)"
   default     = true
 }
+
+variable "utilize_reserved_instances" {
+  type        = bool
+  description = "If Reserved instances exist, Ocean will utilize them before launching Spot instances."
+  default     = false
+}
+
+variable "fallback_to_ondemand" {
+  type        = bool
+  description = "If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead"
+  default     = true
+}
+
+variable "spot_percentage" {
+  type        = number
+  description = "The percentage of Spot instances that would spin up from the desired_capacity number."
+  default     = 70
+}
