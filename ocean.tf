@@ -45,13 +45,13 @@ EOF
     autoscale_is_enabled     = true
     autoscale_is_auto_config = true
   }
-}
 
   fallback_to_ondemand       = var.fallback_to_ondemand
   draining_timeout           = 120
   utilize_reserved_instances = var.utilize_reserved_instances
   grace_period               = 600
   spot_percentage            = var.spot_percentage
+}
 
 module "ocean-controller" {
   source  = "spotinst/ocean-controller/spotinst"
